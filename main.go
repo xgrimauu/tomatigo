@@ -179,25 +179,42 @@ func (m model) View() string {
 		return options
 
 	case Focus:
-		focusString := screenStyle.
+		focusView := screenStyle.
 			MarginTop(4).
 			Render("Focus!")
 
-		timerString := screenStyle.
+		timerView := screenStyle.
 			MarginTop(2).
 			Bold(true).
 			Render(m.timer.View())
-		return lipgloss.JoinVertical(lipgloss.Center, focusString, timerString)
+
+		if !m.timer.Running() {
+			pauseView := screenStyle.
+				MarginTop(1).
+				Bold(true).
+				Render("-PAUSE-")
+			return lipgloss.JoinVertical(lipgloss.Center, focusView, timerView, pauseView)
+		}
+		return lipgloss.JoinVertical(lipgloss.Center, focusView, timerView)
+
 	case Rest:
-		focusString := screenStyle.
+		focusView := screenStyle.
 			MarginTop(4).
 			Render("Rest time")
 
-		timerString := screenStyle.
+		timerView := screenStyle.
 			MarginTop(2).
 			Bold(true).
 			Render(m.timer.View())
-		return lipgloss.JoinVertical(lipgloss.Center, focusString, timerString)
+
+		if !m.timer.Running() {
+			pauseView := screenStyle.
+				MarginTop(1).
+				Bold(true).
+				Render("-PAUSE-")
+			return lipgloss.JoinVertical(lipgloss.Center, focusView, timerView, pauseView)
+		}
+		return lipgloss.JoinVertical(lipgloss.Center, focusView, timerView)
 	default:
 		panic(fmt.Sprintf("unexpected State: %#v", m.state))
 	}
