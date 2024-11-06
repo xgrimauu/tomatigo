@@ -199,8 +199,6 @@ func (m model) View() string {
 			Render(m.timer.View())
 		return lipgloss.JoinVertical(lipgloss.Center, focusString, timerString)
 	default:
-		panic(fmt.Sprintf("unexpected main.State: %#v", m.state))
+		panic(fmt.Sprintf("unexpected State: %#v", m.state))
 	}
-
-	panic("Something went wrong, undefined state!")
 }
