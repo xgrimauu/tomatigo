@@ -46,8 +46,8 @@ func initModel() model {
 		selectedOption: 0,
 		options: []pomodoro{
 			{
-				description: "[test] 1min focus / 1min rest",
-				focus:       time.Duration(7 * time.Second),
+				description: "[test] 2sec focus / 1sec rest",
+				focus:       time.Duration(10 * time.Second),
 				rest:        time.Duration(5 * time.Second),
 			},
 			{
@@ -92,14 +92,14 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			// Switch to rest state
 			selectedPomodoro := m.options[m.selectedOption]
 			m.timer = timer.NewWithInterval(selectedPomodoro.rest, 1*time.Second)
-			playRestNotification()
+			go playRestNotification()
 			m.state = Rest
 			return m, m.timer.Init()
 		case Rest:
 			// Switch to focus state
 			selectedPomodoro := m.options[m.selectedOption]
 			m.timer = timer.NewWithInterval(selectedPomodoro.focus, 1*time.Second)
-			playFocusNotification()
+			go playFocusNotification()
 			m.state = Focus
 			return m, m.timer.Init()
 		}
