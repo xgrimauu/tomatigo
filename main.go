@@ -46,11 +46,6 @@ func initModel() model {
 		selectedOption: 0,
 		options: []pomodoro{
 			{
-				description: "[test] 2sec focus / 1sec rest",
-				focus:       time.Duration(10 * time.Second),
-				rest:        time.Duration(5 * time.Second),
-			},
-			{
 				description: "25min focus / 5min rest",
 				focus:       time.Duration(25 * time.Minute),
 				rest:        time.Duration(5 * time.Minute),
