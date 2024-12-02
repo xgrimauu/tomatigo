@@ -15,10 +15,12 @@ Tomatigo uses Oto to play sounds. So check the installation documentation:
 
 #### Option A (requires Go)
 
-   git clone <https://github.com/xgrimauu/tomatigo.git>
-   cd tomatigo
-   go build .
-   ./tomatigo
+´´´
+git clone <https://github.com/xgrimauu/tomatigo.git>
+cd tomatigo
+go build .
+./tomatigo
+´´´
 
 #### Option B
 
