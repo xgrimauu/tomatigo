@@ -14,12 +14,12 @@ Tomatigo uses Oto to play sounds. So check the installation documentation:
 ### Installing tomatigo
 
 #### Option A (requires Go)
-
-   git clone <https://github.com/xgrimauu/tomatigo.git>
-   cd tomatigo
-   go build .
-   ./tomatigo
-
+```
+git clone <https://github.com/xgrimauu/tomatigo.git>
+cd tomatigo
+go build .
+./tomatigo
+```
 #### Option B
 
 Downloading binary option: Simply download the binary and run ./tomatigo
