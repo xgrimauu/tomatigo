@@ -7,7 +7,7 @@ The *simplest* Pomodoro timer for your terminal.
 
 ## Installation
 
-Tomatigo uses Oto to play sounds. So check the installation documentation:
+Tomatigo uses Oto to play sounds. Check the installation documentation in their repo:
 
 - [Oto](https://github.com/ebitengine/oto?tab=readme-ov-file#prerequisite)
 
