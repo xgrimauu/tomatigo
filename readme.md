@@ -30,3 +30,9 @@ Simply download the binary and run ./tomatigo
 - `<q>` will quit return to timer selection, or the will exit the program if pressed in the selection screen
 
 - Tomatigo supports both Vim keybindings (h,j,k,l) and Arrows for navigation.
+
+
+
+
+
+Built by [@x3does](https://twitter.com/x3does)
