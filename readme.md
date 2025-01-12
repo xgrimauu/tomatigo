@@ -7,7 +7,7 @@ The *simplest* Pomodoro timer for your terminal.
 
 ## Installation
 
-Tomatigo uses Oto to play sounds. So check the installation documentation:
+Tomatigo uses Oto to play sounds. Check the installation documentation in their repo:
 
 - [Oto](https://github.com/ebitengine/oto?tab=readme-ov-file#prerequisite)
 
@@ -23,12 +23,17 @@ go build .
 ´´´
 
 #### Option B
+Downloading binary in releases.
+Simply download the binary and run ./tomatigo
 
-Downloading binary option: Simply download the binary and run ./tomatigo
-
-### Use Tomatigo
-
+### Usage
 - `<space>` will enter the selection and pause the timer.
 - `<q>` will quit return to timer selection, or the will exit the program if pressed in the selection screen
 
 - Tomatigo supports both Vim keybindings (h,j,k,l) and Arrows for navigation.
+
+
+
+
+
+Built by [@x3does](https://twitter.com/x3does)
